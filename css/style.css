@@ -77,3 +77,57 @@ header h1 {
     background-color: var(--primary-color);
     color: white;
 }
+.lista-pokemon{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+}
+.carta-pokemon{
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s;
+    border: 1px solid #eaeaea;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.carta-info{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.add-btn {
+    margin-top: auto;
+    padding: 8px 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.carta-pokemon:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+.pokemon-image {
+    width: 80px; /* Hacemos el contenedor un poco más pequeño para estos sprites */
+    height: 80px;
+    object-fit: contain;
+    margin: 10px 0; /* Un poco de aire arriba y abajo */
+}
+
+.badge {
+    display: inline-block;
+    padding: 4px 8px;
+    margin: 2px;
+    border-radius: 12px;
+    font-size: 0.8em;
+    font-weight: bold;
+    color: white;
+    background-color: #777; /* Color por defecto */
+}
