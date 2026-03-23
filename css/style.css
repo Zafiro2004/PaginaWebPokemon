@@ -27,11 +27,11 @@ header {
 header h1 {
     color: var(--primary-color);
 }
-.app-container {
+.contenedor-app {
     display: flex;
     gap: 20px; /* Espacio entre el panel izquierdo y derecho */
     max-width: 1200px;
-    margin: 0 auto; 
+    margin: 0 auto;
     align-items: flex-start; /* Para que los paneles no se estiren a lo alto si uno es más corto */
 }
 .panel-pokedex, .panel-equipo{
