@@ -19,3 +19,61 @@ body {
     color: var(--text-color);
     padding: 20px;
 }
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    color: var(--primary-color);
+}
+.contenedor-app {
+    display: flex;
+    gap: 20px; /* Espacio entre el panel izquierdo y derecho */
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start; /* Para que los paneles no se estiren a lo alto si uno es más corto */
+}
+.panel-pokedex, .panel-equipo{
+    background-color: var(--panel-bg);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+.panel-pokedex{
+    flex: 2;
+}
+.panel-equipo{
+    flex: 1;
+    position: sticky; /* El panel del equipo te acompañe al subir o bajar*/
+}
+.controles{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+#buscador{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.filtros{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Si hay muchos botones, saltan a la siguiente línea */
+}
+
+.filtro-btn{
+    padding: 8px 12px;
+    border: none;
+    background-color: #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.filtro-btn:hover{
+    background-color: var(--primary-color);
+    color: white;
+}
