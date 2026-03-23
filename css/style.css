@@ -47,3 +47,33 @@ header h1 {
     flex: 1;
     position: sticky; /* El panel del equipo te acompañe al subir o bajar*/
 }
+.controles{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+#buscador{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+.filtros{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Si hay muchos botones, saltan a la siguiente línea */
+}
+
+.filtro-btn{
+    padding: 8px 12px;
+    border: none;
+    background-color: #ddd;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.filtro-btn:hover{
+    background-color: var(--primary-color);
+    color: white;
+}
