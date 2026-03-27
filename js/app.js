@@ -31,3 +31,16 @@ function renderListaPokemon(listaPokemon) {
     });
 }
 renderListaPokemon(pokemonData);
+
+//Lógica de equipo
+let miEquipo = [];
+
+const slotsEquipo = document.getElementById('slots-equipo');
+const contadorEquipo = document.getElementById('contador-equipo');
+
+cuadriculaListaPokemon.addEventListener('click',(event)=>{
+    if(event.target.classList.contains('add-btn')){
+        const pokemonId = parseInt(event.target.getAttribute('data-id'));
+        aniadirPokemon(pokemonId);
+    }
+});
