@@ -239,7 +239,7 @@ header h1 {
     transition: transform 0.2s ease-in-out;
 }
 
-.wikidex-link:hover .pokemon-name {
+.wikidex-link:hover .pokemon-nombre {
     color: var(--primary-color); /* El nombre se vuelve rojo Pokémon */
     transition: color 0.2s;
 }
