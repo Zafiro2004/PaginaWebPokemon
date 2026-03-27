@@ -131,3 +131,21 @@ header h1 {
     color: white;
     background-color: #777; /* Color por defecto */
 }
+/* Colores por tipo actualizados y ampliados */
+.type-fuego { background-color: #ff9d5c; }
+.type-agua { background-color: #5cafff; }
+.type-planta { background-color: #7bd55b; }
+.type-electrico { background-color: #ffd65c; color: #333; }
+.type-veneno { background-color: #b55cff; }
+.type-psiquico { background-color: #ff5ca8; }
+.type-normal { background-color: #a8a878; }
+.type-hada { background-color: #ee99ac; color: #333; }
+.type-fantasma { background-color: #705898; }
+.type-dragon { background-color: #7038f8; }
+.type-volador { background-color: #a890f0; }
+.type-tierra { background-color: #e0c068; }
+.type-lucha { background-color: #c03028; }
+.type-hielo { background-color: #98d8d8; color: #333; }
+.type-roca { background-color: #b8a038; }
+.type-bicho { background-color: #a8b820; color: #333; }
+.type-acero { background-color: #b8b8d0; color: #333; }
