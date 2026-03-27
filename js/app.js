@@ -85,3 +85,15 @@ function renderTeam() {
         }
     );
 }
+slotsEquipo.addEventListener('click', (event) => {
+    if (event.target.classList.contains('remove-btn')) {
+        const index = parseInt(event.target.getAttribute('data-index'));
+        miEquipo.splice(index, 1);
+        renderTeam();
+    }
+});
+
+function eliminarPokemon(id) {
+    miEquipo = miEquipo.filter(pokemon => pokemon.id !== id);
+    renderTeam();
+}
