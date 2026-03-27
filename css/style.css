@@ -46,6 +46,7 @@ header h1 {
 .panel-equipo{
     flex: 1;
     position: sticky; /* El panel del equipo te acompañe al subir o bajar*/
+    top: 20px;
 }
 .controles{
     display: flex;
