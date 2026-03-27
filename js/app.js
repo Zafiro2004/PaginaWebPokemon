@@ -62,7 +62,7 @@ function aniadirPokemon(id) {
 }
 
 function renderTeam() {
-    slotsEquipo.textContent = `${miEquipo.length}/6`;
+    contadorEquipo.textContent = `${miEquipo.length}/6`;
 
     slotsEquipo.innerHTML = '';
 
