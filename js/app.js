@@ -58,5 +58,5 @@ function aniadirPokemon(id) {
 
     miEquipo.push(pokemon);
 
-    renderListaPokemon();
+    renderTeam();
 }
