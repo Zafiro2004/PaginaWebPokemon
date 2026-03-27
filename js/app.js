@@ -60,3 +60,28 @@ function aniadirPokemon(id) {
 
     renderTeam();
 }
+
+function renderTeam() {
+    slotsEquipo.textContent = `${miEquipo.length}/6`;
+
+    slotsEquipo.innerHTML = '';
+
+    if (miEquipo.length === 0) {
+        slotsEquipo.innerHTML = '<p class="empty-message">Aún no has añadido ningún Pokémon.</p>';
+        return;
+    }
+    miEquipo.forEach((pokemon, index) =>{
+        const miembroEquipo = document.createElement('div');
+        miembroEquipo.classList.add('miembro-equipo');
+        miembroEquipo.innerHTML = `
+            <img src="${pokemon.image}" alt="${pokemon.name}">
+            <div class="member-info">
+                <h4>${pokemon.name}</h4>
+                <span>HP: ${pokemon.stats.hp} | ATK: ${pokemon.stats.attack}</span>
+            </div>
+            <button class="remove-btn" data-index="${index}">X</button>
+        `;
+        slotsEquipo.appendChild(miembroEquipo);
+        }
+    );
+}
