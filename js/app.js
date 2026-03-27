@@ -49,7 +49,7 @@ function aniadirPokemon(id) {
         alert("¡Tu equipo ya está lleno! Máximo 6 Pokémon.");
         return;
     }
-    if (myTeam.some(pokemon => pokemon.id === id)) { //Evitar duplicados
+    if (miEquipo.some(pokemon => pokemon.id === id)) { //Evitar duplicados
         alert("¡Este Pokémon ya está en tu equipo!");
         return;
     }
