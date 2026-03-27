@@ -44,3 +44,19 @@ cuadriculaListaPokemon.addEventListener('click',(event)=>{
         aniadirPokemon(pokemonId);
     }
 });
+function aniadirPokemon(id) {
+    if(miEquipo.length >= 6){
+        alert("¡Tu equipo ya está lleno! Máximo 6 Pokémon.");
+        return;
+    }
+    if (myTeam.some(pokemon => pokemon.id === id)) { //Evitar duplicados
+        alert("¡Este Pokémon ya está en tu equipo!");
+        return;
+    }
+
+    const pokemon = pokemonData.find(pokemon => pokemon.id === id);
+
+    miEquipo.push(pokemon);
+
+    renderListaPokemon();
+}
