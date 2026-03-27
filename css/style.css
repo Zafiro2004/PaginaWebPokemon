@@ -227,3 +227,19 @@ header h1 {
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
     border-color: var(--primary-color);
 }
+.wikidex-link {
+    text-decoration: none; /* Quita el subrayado azul por defecto */
+    color: inherit; /* Hereda el color del texto original (gris oscuro) */
+    display: block; /* Asegura que el área clicable ocupe todo el espacio */
+}
+
+/* Efectos al pasar el ratón por encima del enlace */
+.wikidex-link:hover .pokemon-image {
+    transform: scale(1.15); /* Hace el GIF ligeramente más grande */
+    transition: transform 0.2s ease-in-out;
+}
+
+.wikidex-link:hover .pokemon-name {
+    color: var(--primary-color); /* El nombre se vuelve rojo Pokémon */
+    transition: color 0.2s;
+}
