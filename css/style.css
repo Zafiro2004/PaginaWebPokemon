@@ -149,3 +149,80 @@ header h1 {
 .type-roca { background-color: #b8a038; }
 .type-bicho { background-color: #a8b820; color: #333; }
 .type-acero { background-color: #b8b8d0; color: #333; }
+
+.cabecera-equipo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+.empty-message {
+    color: #777;
+    font-style: italic;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.miembro-equipo {
+    display: flex;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: var(--border-radius);
+    padding: 10px;
+    margin-bottom: 10px;
+    gap: 12px;
+    transition: transform 0.2s;
+}
+.miembro-equipo:hover {
+    transform: translateX(-5px);
+    border-color: var(--primary-color);
+}
+.miembro-equipo img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    background-color: white;
+    border-radius: 50%;
+    padding: 2px;
+    border: 1px solid #ddd;
+}
+.member-info{
+    flex-grow: 1;
+}
+.member-info h4 {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.member-info span {
+    font-size: 11px;
+    color: #666;
+}
+.remove-btn{
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+.remove-btn:hover {
+    background-color: #cc0000;
+}
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    border-color: var(--primary-color);
+}
