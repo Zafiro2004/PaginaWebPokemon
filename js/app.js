@@ -97,3 +97,42 @@ function eliminarPokemon(id) {
     miEquipo = miEquipo.filter(pokemon => pokemon.id !== id);
     renderTeam();
 }
+let textoActualSeleccionado = '';
+let filtroTipoSeleccionado = 'all';
+
+function aplicarFiltro() {
+    let resultado = pokemonData;
+
+    if(filtroTipoSeleccionado !== 'all') {
+        resultado = resultado.filter(pokemon => pokemon.types.includes(filtroTipoSeleccionado));
+    }
+
+    if(textoActualSeleccionado.trim() !== '') {
+        resultado = resultado.filter(pokemon => pokemon.name.toLowerCase().includes(textoActualSeleccionado));
+    }
+
+    renderListaPokemon(resultado);
+}
+
+
+const inputBusqueda = document.getElementById('buscador');
+
+inputBusqueda.addEventListener('input', (event) => {
+    textoActualSeleccionado = event.target.value.toLowerCase();
+    aplicarFiltro();
+});
+
+
+const contenedorFiltros = document.getElementById('filtros');
+
+contenedorFiltros.addEventListener('click', (event) => {
+    if(event.target.classList.contains('filtro-btn')){
+
+        filtroTipoSeleccionado = event.target.getAttribute('data-type');
+
+        document.querySelectorAll('.filtro-btn').forEach(btn => btn.classList.remove('active'));
+        event.target.classList.add('active');
+
+        aplicarFiltro();
+    }
+});
