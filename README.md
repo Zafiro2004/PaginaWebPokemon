@@ -6,31 +6,31 @@ Una aplicación web interactiva desarrollada con Vanilla JavaScript, HTML5 y CSS
 
 ## 📋 Documentación del Proyecto
 
-**1. Idea general del proyecto**
+### **1. Idea general del proyecto**
 El proyecto es una aplicación web interactiva de una sola página (Single Page Application) que funciona como una Pokédex y un creador de equipos (*Team Builder*). Permite al usuario explorar un catálogo de 80 Pokémon clásicos (evoluciones finales o únicas de la primera generación), buscar por nombre, filtrar por tipo y seleccionar hasta 6 Pokémon para formar un equipo. Los cambios, como la actualización del equipo o los resultados de búsqueda, se reflejan en tiempo real en la interfaz.
 
-**2. Estructura básica del trabajo**
+### **2. Estructura básica del trabajo**
 El proyecto se ha construido utilizando únicamente tecnologías web nativas (Vanilla), estructuradas en tres capas:
 * **HTML5:** Define la estructura semántica de la página. Se divide en un `<header>` principal y un `.contenedor-app` que alberga dos paneles laterales: una `<section>` para el catálogo (Pokédex) y un `<aside>` para el equipo.
 * **CSS3:** Se encarga del diseño visual y la disposición. Se ha prescindido de *frameworks* externos, utilizando variables CSS (`:root`) para la paleta de colores y el sistema de diseño.
 * **JavaScript:** La lógica está separada en dos archivos para mayor limpieza: `data.js` (almacenamiento de datos estáticos) y `app.js` (manipulación del DOM y gestión de eventos).
 
-**3. Datos mockeados utilizados**
+### **3. Datos mockeados utilizados**
 Los datos están estructurados en el archivo `data.js` mediante un *array* de objetos (`pokemonData`). Se han mockeado 80 Pokémon, cada uno conteniendo: un identificador numérico (`id`), el nombre (`name`), un *array* con sus tipos (`types`), sus estadísticas de combate (`stats`) y una URL (`image`). Para darle un aspecto moderno y dinámico, las URLs de las imágenes apuntan a GIFs animados de los modelos 3D alojados en el repositorio oficial de *Showdown* a través de la PokéAPI.
 
-**4. Principales decisiones de diseño y organización**
+### **4. Principales decisiones de diseño y organización**
 * **Layout Adaptativo:** Se ha utilizado **CSS Flexbox** para la estructura principal (`.contenedor-app`), permitiendo que el panel de la Pokédex (`flex: 2`) tenga más anchura que el panel lateral del equipo (`flex: 1`).
 * **Grid Responsivo:** El catálogo de Pokémon utiliza **CSS Grid** con la regla `grid-template-columns: repeat(auto-fill, minmax(150px, 1fr))`, lo que garantiza que las tarjetas se adapten automáticamente a cualquier tamaño de pantalla.
 * **Navegación Fluida:** El panel lateral del equipo utiliza `position: sticky; top: 20px;`, lo que permite que el equipo seleccionado acompañe visualmente al usuario mientras hace *scroll*.
 * **Experiencia de Usuario (UX):** Se han incluido enlaces dinámicos en las imágenes y nombres que abren la *WikiDex* en una pestaña nueva (`target="_blank"`), evitando que se pierda el progreso. Los tipos de Pokémon están representados con *badges* coloreados para una rápida identificación visual.
 
-**5. Explicación general del código y funcionalidades**
+### **5. Explicación general del código y funcionalidades**
 El archivo `app.js` gestiona el estado y la interactividad mediante las siguientes técnicas:
 * **Renderizado Dinámico:** La función `renderListaPokemon` vacía el contenedor HTML y lo reconstruye iterando sobre el *array* de datos utilizando *Template Literals* (`` ` ``) para inyectar el código HTML.
 * **Gestión de Estado Centralizada:** Se utilizan dos variables globales (`textoActualSeleccionado` y `filtroTipoSeleccionado`). La función `aplicarFiltro()` lee ambas variables y encadena el método `.filter()` sobre el *array* original para mostrar siempre el resultado correcto combinando ambos filtros.
 * **Delegación de Eventos:** Para mejorar el rendimiento, los *Event Listeners* se asignan a los contenedores padre (`#lista-pokemon`, `#filtros`, `#slots-equipo`). Mediante `event.target.classList.contains()` se intercepta el clic exacto, extrayendo los datos necesarios con atributos personalizados (`data-id`, `data-type`, `data-index`).
 
-**6. Uso de la IA**
+### **6. Uso de la IA**
 La inteligencia artificial se ha utilizado como tutor y asistente de programación durante el desarrollo del proyecto.
 * **¿Para qué se ha utilizado?** Para generar el extenso *array* de datos de prueba (`data.js`), estructurar la lógica inicial de JavaScript, y como herramienta de depuración para identificar y corregir errores de sintaxis o variables mal escritas.
 * **¿En qué parte ha influido?** Principalmente en la implementación de técnicas avanzadas como la delegación de eventos en JS, el uso de CSS Grid/Flexbox y la resolución de conflictos de estado entre los filtros de búsqueda y los botones.
